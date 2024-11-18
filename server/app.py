@@ -6,6 +6,10 @@ from flask_bcrypt import Bcrypt
 from config import Config, register_models, register_routes
 from flask_jwt_extended import JWTManager
 
+# Print the current directory and its contents for debugging
+print("Current directory:", os.getcwd())
+print("Directory contents:", os.listdir(os.getcwd()))
+
 app = Flask(__name__)
 CORS(app)
 bcrypt = Bcrypt(app)
